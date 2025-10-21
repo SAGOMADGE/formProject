@@ -14,13 +14,16 @@
         <h2>SAGOMADGE</h2>
       </div>
       <div class="rightSide">
-        <h2>
-          This is not a real service. <br />
-          You know you need something like this to realize your dreams.
-          <br />Sign up now to get started.
-        </h2>
-        <br /><br />
-        <h2>You know you want to.</h2>
+        <div class="divHeader">
+          <h2>
+            This is not a real service. <br />
+            You know you need something like this to realize your dreams.
+            <br />Sign up now to get started.
+          </h2>
+          <br /><br />
+          <h2>You know you want to.</h2>
+        </div>
+
         <form action="#" method="post">
           <h2>Lets do this!</h2>
           <div class="row">
@@ -41,6 +44,8 @@
                   type="password"
                   name="password"
                   placeholder="Введите пароль"
+                  minlength="6"
+                  maxlength="15"
                 />
               </label>
             </div>
@@ -71,6 +76,13 @@
             </div>
           </div>
         </form>
+
+        <button type="submit">Submit</button>
+
+        <p>
+          Already have an account?
+          <a href="#">Log in.</a>
+        </p>
       </div>
     </div>
   </body>

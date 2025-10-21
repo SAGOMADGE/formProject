@@ -12,7 +12,7 @@
 }
 
 body {
-  font-size: 0.8em;
+  font-size: 1rem;
   height: 100vh;
 }
 
@@ -27,9 +27,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 100px;
-  margin-left: 100px;
-  padding-right: 200px;
+  padding-top: 70px;
+  flex: 1;
+}
+
+.rightSide > h2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.divHeader {
+  padding-left: 60px;
 }
 
 .leftSide {
@@ -41,7 +49,6 @@ body {
   height: 100vh;
   width: 50%;
 }
-
 .leftSide .bg {
   position: absolute;
   top: 0;
@@ -70,12 +77,14 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 100px;
+  margin-top: 55px;
   padding: 50px;
   width: 100%;
   background-color: #fff;
   gap: 20px;
+  padding-right: 150px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  /* flex-wrap: wrap; */
 }
 
 .row {
@@ -94,9 +103,55 @@ input {
   border-radius: 8px;
   border: 1px solid #ccc;
   margin-top: 5px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* При фокусе */
+input:focus {
+  border: 1px solid #2563eb;
+  box-shadow: 0 0 4px rgba(37, 99, 235, 0.3);
+  outline: none;
+}
+
+/* Если неверно заполнено (но только после взаимодействия) */
+input:focus:invalid,
+input:not(:placeholder-shown):invalid {
+  border: 1px solid #ef4444; /* красный */
+}
+
+/* Если корректно заполнено */
+input:valid {
+  border: 1px solid #22c55e; /* зелёный */
 }
 
 label {
   font-weight: 600;
   font-size: 1rem;
+  margin-top: 5px;
+}
+
+button {
+  margin: 10px 80px;
+  border-style: none;
+  border-radius: 8px;
+  padding: 15px 90px;
+  color: #fff;
+  background-color: #2563eb;
+  transition: 300ms ease;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #0a3eb0;
+}
+
+p {
+  margin-left: 50px;
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
 }
